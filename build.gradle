@@ -32,7 +32,7 @@ dependencies {
     // https://mvnrepository.com/artifact/com.google.code.gson/gson
     implementation 'com.google.code.gson:gson:2.8.6'
     // https://mvnrepository.com/artifact/software.amazon.awssdk/iam
-    implementation group: 'software.amazon.awssdk', name: 'iam', version: '2.15.77'
+    compile group: 'software.amazon.awssdk', name: 'iam', version: '2.15.77'
     // https://mvnrepository.com/artifact/software.amazon.awssdk/core
     compile group: 'software.amazon.awssdk', name: 'core', version: '2.15.77', ext: 'pom'
     // https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-iam
