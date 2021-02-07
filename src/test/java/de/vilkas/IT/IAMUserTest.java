@@ -1,10 +1,10 @@
 package de.vilkas.IT;
 
 import com.amazonaws.services.identitymanagement.AmazonIdentityManagement;
-import com.amazonaws.services.identitymanagement.AmazonIdentityManagementClientBuilder;
 import com.amazonaws.services.identitymanagement.model.ListUsersRequest;
 import com.amazonaws.services.identitymanagement.model.ListUsersResult;
 import com.amazonaws.services.identitymanagement.model.User;
+import de.vilkas.common.IAMSupplier;
 import de.vilkas.controller.IAMUserController;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -27,11 +27,7 @@ public class IAMUserTest {
                 .userName(name)
                 .build();
 
-        final AmazonIdentityManagement iam =
-                AmazonIdentityManagementClientBuilder
-                        .standard()
-                        .withRegion("eu-central-1")
-                        .build();
+        final AmazonIdentityManagement iam = IAMSupplier.get();
 
         ListUsersRequest request = new ListUsersRequest();
         ListUsersResult response = iam.listUsers(request);
