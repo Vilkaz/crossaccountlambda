@@ -6,6 +6,6 @@ public class AWSCrossAccountAccessController {
 
     public String  create(InputData inputData) {
 
-        return "ok";
+        return "success";
     }
 }
