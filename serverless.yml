@@ -13,7 +13,7 @@
 
 service: crossaccountlambda
 # app and org for use with dashboard.serverless.com
-#app: your-app-name
+#app: crossaccountlambda
 #org: your-org-name
 
 # You can pin your service to only deploy with a specific Serverless version
@@ -50,11 +50,11 @@ provider:
 
 # you can add packaging information here
 package:
-  artifact: build/distributions/hello.zip
+  artifact: build/distributions/crossaccount.zip
 
 functions:
-  hello:
-    handler: com.serverless.Handler
+  cross-account-lambda:
+    handler: de.vilkas.LambdaHandler
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details

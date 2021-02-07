@@ -1,0 +1,8 @@
+{
+  "name": "test1",
+  "policy": {
+    "id": 1337,
+    "arn": "testARN"
+  },
+  "schrott" : "true"
+}
